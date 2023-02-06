@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CRUD</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="m-auto w-75 my-5">
+        <h1 class="text-center text-warning">
+            CRUD SYSTEM
+        </h1>
+        <label class="fs-5 mb-2 text-light" for="productName">
+            product name
+        </label>
+        <input id="productName" class="form-control mb-3" type="text" placeholder="Product name">
+
+        <label class="fs-5 mb-2 text-light" for="productPrice">
+            product price
+        </label>
+        <input id="productPrice" class="form-control mb-3" type="number" placeholder="Product price">
+
+        <label class="fs-5 mb-2 text-light" for="category">
+            Category
+        </label>
+        <input id="category" class="form-control mb-3" type="text" placeholder="Category">
+
+        <label class="fs-5 mb-2 text-light" for="productDescription">
+            Description
+        </label>
+        <textarea id="productDescription" class="form-control mb-3"></textarea>
+        <button onclick="addProduct()" id="addBtn" class="btn btn-outline-warning fw-bolder "> Add product</button>
+    </div>
+
+    <div class="w-75 m-auto py-5" >
+
+        <input oninput="searchProduct(this.value)" class="form-control mb-4 w-75 m-auto" placeholder="Search" type="text">
+        <table class="table text-warning text-center">
+            <thead class="">
+                <th>
+                    Name
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+                    Category
+                </th>
+                <th>
+                    Feedback
+                </th>
+                <th>
+                    Delete
+                </th>
+                <th>
+                    Update
+                </th>
+            </thead>
+            <tbody id="tableBody" class="text-light">
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
